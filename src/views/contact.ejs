@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- English: This website has been created by Jesse's Code Copyright -->
+    <!-- Português: Este site foi criado por Jesse's Code -->
+    <!-- Español: Este sitio web fué creado por Jesse's Code -->
+    <%- include("partials/SEO", {
+        description: `contacta a Jesse's Code`,
+        page: "Contact"
+    }) %>
+    <%- include("partials/styles", {path: path}) %>
+    <link rel="stylesheet" type="text/css" href="<%=path%>css/typing.css">
+    <link rel="stylesheet" type="text/css" href="<%=path%>css/forms.css">
+</head>
+<body>
+    <div id="root">
+        <header>
+            <%- include("partials/nav", {path: path}) %>
+            <h1 class="maximum-title">Contáctame</h1>
+        </header>
+        <div class="container-block">
+            <div class="contain-form">
+                <% if (message > 0) { %>
+                    <div class="alert">
+                        <strong><%=message%></strong>
+                    </div>
+                <%}%>
+                <form action="/contact" enctype="application/x-www-form-urlencoded" method="post">
+                    <div class="entry entry-group">
+                        <label for="username">Nombre</label>
+                        <input type="text" name="username" class="entry-control" required>
+                    </div>
+                    <div class="entry entry-group">
+                        <label for="lastusername">Apellido</label>
+                        <input type="text" name="lastusername" class="entry-control" required>
+                    </div>
+                    <div class="entry entry-group">
+                        <label for="usermail">Email</label>
+                        <input type="email" name="usermail" class="entry-control" required>
+                    </div>
+                    <div class="entry contain-msg">
+                        <label for="msg">Mensaje</label>
+                        <textarea name="msg" class="msg entry-control" required></textarea>
+                    </div>
+                    <div class="entry-submit">
+                        <button type="submit" class="entry-button-submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contain-map">
+                <h2 class="subtitle">Aquí me encuentro!</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.348440074854!2d-53.004112485867296!3d-26.924166100164737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fb23d4a406397d%3A0x42a02effed5b6603!2sR.%20Princesa%20Isabel%2C%20508%20-%20Belvedere%2C%20Saudades%20-%20SC%2C%2089868-000!5e0!3m2!1ses!2sbr!4v1649728283444!5m2!1ses!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include("partials/footer", {path: path}) %>
+    <script>current = 'contact';</script>
+    <%- include("partials/scripts", {path: path}) %>
+</body>
+</html>

@@ -1,0 +1,237 @@
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+}
+* {
+    font-family: 'Comfortaa', cursive;
+}
+
+
+.menu-container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background: #32354b;
+    color: #cdcdcd;
+    padding: 20px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.menu-logo {
+    line-height: 0;
+    margin: 0 20px;
+}
+
+.menu-logo img {
+    max-height: 40px;
+    max-width: 100px;
+    flex-shrink: 0;
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: #cdcdcd;
+    transition: color 0.25s ease;
+}
+
+.menu-container a:hover {
+    color: #5a58be;
+}
+
+.menu-container input {
+    display: block;
+    width: 35px;
+    height: 25px;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+}
+
+/* Burger menu */
+.menu-container span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+
+.menu-container span:first-child {
+    transform-origin: 0% 0%;
+}
+
+.menu-container span:nth-child(3) {
+    transform-origin: 0% 100%;
+}
+
+.menu-container input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(3px,-1px);
+    background: #fff;
+}
+
+.menu-container input:checked ~ span:nth-child(4) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menu-container input:checked ~ span:nth-child(3) {
+    transform: rotate(-45deg) translate(-5px,11px);
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    padding: 20px 0;
+    font-size: 22px;
+}
+.nav-item {
+    position: relative;
+}
+.nav-link {
+    padding: 12px 0;
+}
+.before {
+    position: absolute;
+    left: 50%;
+    bottom: -40%;
+    height: 5px;
+    background: #5566b3;
+    width: 0;
+    transition: 0.25s;
+}
+.nav-item:hover .before {
+    left: 0;
+    width: 100%;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 767px) { 
+    
+    .nav-link{
+        color: #fff;
+    }
+    .menu-container {
+    flex-direction: column;
+    align-items: flex-end;
+    }
+    
+    .menu-logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+
+    .menu-logo img {
+    max-height: 30px;
+    }
+
+    .menu {
+    position: absolute;
+    box-sizing: border-box;
+    width: 300px;
+    right: -300px;
+    top: 0;
+    margin: -20px;
+    padding: 75px 50px 50px;
+    background: #32354b;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translateX(0%);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+
+    .menu-container input:checked ~ .menu {
+    transform: translateX(-100%);
+    }
+}
+
+/* desktop styles */
+@media only screen and (min-width: 768px) { 
+    .menu-container {
+    width: 100%;
+    }
+
+    .menu-container a {
+    color: #fff;
+    }
+
+    .menu-container input {
+    display: none;
+    }
+
+    /* Burger menu */
+    .menu-container span {
+    display: none;
+    }
+
+    .menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .menu ul {
+    display: flex;
+    padding: 0;
+    }
+
+    .menu li {
+    padding: 0 20px;
+    }
+    .nav-link{
+        color: #fff;
+    }
+}
+#loggin {
+    transform: rotate(180deg);
+}
+@media only screen and (max-width: 991px) {
+    .before {
+        display: none;
+    }
+    .maximum-title {
+        animation: none !important;
+        background: transparent;
+    }
+}
+
+.maximum-title {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 24px;
+    color: #777;
+    background: #ccc;
+    padding: 32px 0;
+    animation: delado 2s forwards;
+    animation-delay: 0.5s;
+}
+@keyframes delado {
+    from {
+        border-radius: 8px;
+    }
+    to {
+        border-radius: 0px 400px 0px 400px / 0px 150px 1px 150px;
+    }
+}

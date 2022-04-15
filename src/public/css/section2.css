@@ -1,0 +1,131 @@
+.section {
+    width: 100vw;
+}
+.card {
+    -webkit-box-shadow: 5px 3px 20px 1px #000000e0; 
+    box-shadow: 5px 3px 20px 1px #000000e0;
+    width: 80%;
+    margin: 24px auto;
+    margin-top: 0;
+    position: relative;
+    padding: 16px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    background: #3e4364;
+    color: #fff;
+}
+.card-component {
+    width: 100%;
+}
+.card-head {
+    height: 42%;
+    display: flex;
+}
+.card-body {
+    height: 50%;
+    padding: 0 24px;
+    display: flex;
+}
+.card-footer {
+    height: 8%;
+}
+/*Component Head Style*/
+.img-thumbnail {
+    width: 20%;
+    height: auto;
+    display: inline-block;
+    border-radius: 4px;
+    max-height: 100%;
+}
+.card-title {
+    font-size: 2.2em;
+    width: 70%;
+    text-align: center;
+    padding-top: 88px;
+}
+.card-sections {
+    width: 15%;
+    text-align: center;
+    padding-top: 48px;
+}
+.card-sections section {
+    margin: 12px 0;
+    background: #535985;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+.card-sections section a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.2s;
+}
+.card-sections section a:hover {
+    color: #fca;
+}
+.contain-description {
+    width: 80%;
+    padding: 0 96px;
+    text-align: left;
+}
+.card-button {
+    float: inline-end;
+    margin-left: 24px;
+    text-decoration: none;
+    padding: 12px;
+    text-align: center;
+    color: #fff;
+    background: #5a63aa;
+    border: 1px solid #6c78d6;
+    box-shadow:0 0 6px #6c78d6;
+    -moz-box-shadow:0 0 6px #6c78d6;
+    -webkit-box-shadow:0 0 6px #6c78d6;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 992px) {
+    .contain-description {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .img-thumbnail {
+        width: 30%;
+    }
+    .card {
+        height: 650px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .card {
+        height: 70%;
+    }
+    .card-body {
+        display: block;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .card-sections {
+        width: 100%;
+        display: block;
+        margin-bottom: 24px;
+    }
+    .img-thumbnail {
+        width: 50%;
+    }
+    .contain-description {
+        width: 100%;
+        display: block;
+        padding: 0 12px;
+        text-align: left;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        box-sizing: border-box;
+        max-height: 50%;
+    }
+    .card-button {
+        display: block;
+        float: none;
+        margin-top: 12px;
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- English: This website has been created by Jesse's Code Copyright -->
+    <!-- Português: Este site foi criado por Jesse's Code -->
+    <!-- Español: Este sitio web fué creado por Jesse's Code -->
+    <%- include("partials/SEO", {
+        description: `Esta es la página inicial por ahora`,
+        page: "Home"
+    }) %>
+    <%- include("partials/styles", {path: path}) %>
+    <link rel="stylesheet" type="text/css" href="<%=path%>css/typing.css">
+    <link rel="stylesheet" type="text/css" href="<%=path%>css/section2.css">
+</head>
+<body>
+    <div id="root">
+        <header>
+            <%- include("partials/nav", {path: path}) %>
+            <h1 class="maximum-title">Bienvenido a Jesse's Code!</h1>
+        </header>
+        <main class="section">
+            <div class="main-head">
+                <h2 class="main-title">Hello world</h2>
+            </div>
+            <div class="main-body">
+                <div class="main-thumbnail">
+                    <img src="<%=path%>assets/imgs/main.png" alt="Main-thumbnail">
+                </div>
+                <div class="main-group">
+                    <span class="main-subtitle">Subtitle</span>
+                    <p class="main-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium laborum culpa dolor iusto sapiente eum nostrum, dolorem labore, corporis aspernatur facilis. In ex enim similique illum at, consequuntur odit?
+                    </p>
+                </div>
+            </div>
+            <div class="main-footer">
+
+            </div>
+        </main>
+        <div class="section">
+            <div class="card">
+                <div class="card-head card-component">
+                    <img src="<%=path%>assets/imgs/jesse.jpg" alt="Isaí Medina" class="img-thumbnail">
+                    <span class="card-title">Un poco sobre mí</span>
+                </div>
+                <div class="card-body card-component">
+                    <div class="card-sections">
+                        <section><a href="/about#academy">Formación</a></section>
+                        <section><a href="/works#certificates">Certificados</a></section>
+                        <section><a href="/works">Trabajos</a></section>
+                        <section><a href="/works#curses">Cursos</a></section>
+                    </div>
+                    <div class="contain-description">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae saepe ullam ab quisquam voluptates ad aliquid a totam excepturi tenetur tempora quis, facilis officiis sunt voluptatum qui. Id, distinctio.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae saepe ullam ab quisquam voluptates ad aliquid a totam excepturi tenetur tempora quis, facilis officiis sunt voluptatum qui. Id, distinctio.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae saepe ullam ab quisquam voluptates ad aliquid a totam excepturi tenetur tempora quis, facilis officiis sunt voluptatum qui. Id, distinctio.
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="card-footer card-component">
+                    <span class="slogan">Isaí Gabriel Medina | Autor de <%- include("partials/brand") %></span>
+                    <a href="/about" class="card-button">Leer más</a>
+                    <a href="/about" class="card-button"><i class="fa fa-phone"></i> Contactar</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="contain-title">
+                <strong>Trabajos recientes</strong>
+            </div>
+            <div class="container">
+                <% for (work of recentWorks) { %>
+                    <div class="colm">
+                        <article class="article-present">
+                            <% if (work.state === "new") { %> 
+                                <span class="article-new">New</span>
+                                <%}%>
+                            <div class="article-head">
+                                <img src="<%=path%>assets/articles/<%=work.image%>" alt="<%=work.name%>" class="img-article-top">
+                            </div>
+                            <strong class="article-title">
+                                <%=work.title%>
+                            </strong>
+                            <p class="article-description">
+                                <%=work.simpleDescript%>
+                            </p>
+                            <a href="<%=work.link%>" class="article-button"><b class="button-bold">Ver Más</b></a>
+                            <small class="article-footer"><%=work.createdAt%></small>
+                        </article>
+                    </div>
+                    <%}%>
+            </div>
+        </div>
+        <div class="section">
+            <div class="contain-title">
+                <strong>Posts recientes</strong>
+            </div>
+            <div class="container">
+                <% for (article of recentArticles) { %>
+                <div class="colm">
+                    <article class="article-present">
+                        <% if (article.state === "new") { %> 
+                        <span class="article-new">New</span> <%}%>
+                        <div class="article-head">
+                            <img src="<%=path%>assets/articles/<%=article.thumbnail%>" alt="Isaí Medina" class="img-article-top">
+                        </div>
+                        <strong class="article-title">
+                            <%=article.title%>
+                        </strong>
+                        <p class="article-description">
+                            <%=article.simpleDescript%>
+                        </p>
+                        <a href="<%=article.href%>" class="article-button"><b class="button-bold">Read More.</b></a>
+                        <small class="article-footer"><%=article.createdAt%></small>
+                    </article>
+                </div>
+                <%}%>
+            </div>
+        </div>
+        <%- include("partials/footer", {path: path}) %>
+    <script>current = 'home';</script>
+    <%- include("partials/scripts", {path: path}) %>
+</body>
+</html>

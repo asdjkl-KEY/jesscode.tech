@@ -1,0 +1,64 @@
+<footer class="page-footer">
+    <div class="footer-head">
+        <div class="footer-start">
+            <div class="social-web">
+                <ul class="footer-list">
+                    <li class="footer-item"><a href="#" class="footer-link"> <img src="<%=path%>assets/svg/instagram.svg" alt="instagram" class="footer-icon"> @JessCode.tech </a></li>
+                    <li class="footer-item"><a href="#" class="footer-link"> <img src="<%=path%>assets/svg/facebook.svg" alt="facebook" class="footer-icon"> Jesse's Code </a></li>
+                    <li class="footer-item"><a href="#" class="footer-link"> <img src="<%=path%>assets/svg/discord.svg" alt="discord" class="footer-icon"> Jesse's Comunity </a></li>
+                    <li class="footer-item"><a href="#" class="footer-link"> <img src="<%=path%>assets/svg/whatsapp.svg" alt="whatsapp" class="footer-icon"> Jesse </a></li>
+                </ul>
+            </div>
+            <hr class="div-footer">
+            <div class="footer-sections">
+                <ul class="footer-list">
+                    <li class="footer-item"><section class="footer-section"><a href="#" class="footer-link">Política de privacidad</a></section></li>
+                    <li class="footer-item"><section class="footer-section"><a href="#" class="footer-link">Política de cookies</a></section></li>
+                    <li class="footer-item"><section class="footer-section"><a href="#" class="footer-link">Términos de Uso</a></section></li>
+                    <li class="footer-item"><section class="footer-section"><a href="#" class="footer-link">Localización</a></section></li>
+                    <li class="footer-item"><section class="footer-section"><a href="#" class="footer-link">link aleatory</a></section></li>
+                    <li class="footer-item"><section class="footer-section"><a href="#" class="footer-link">link aleatory</a></section></li>
+                    <li class="footer-item"><section class="footer-section"><a href="#" class="footer-link">link aleatory</a></section></li>
+                    <li class="footer-item"><section class="footer-section"><a href="#" class="footer-link">link aleatory</a></section></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="div-footer">
+        <div class="footer-end">
+            <div class="contain-footer-form">
+                <span class="form-title">Form Title</span>
+                <form action="/" method="post" enctype="application/x-www-form-urlencoded">
+                    <div class="grid-duo">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" class="footer-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Apellido</label>
+                            <input type="text" name="lastname" class="footer-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" name="email" id="email" class="footer-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="footermessage">Mensaje</label>
+                        <textarea name="footermessage" id="message" class="footer-message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="notifications" class="form-checkbox">
+                        <small>Acepto recibir notificaciones de <%- include("brand") %> </small>
+                    </div>
+                    <div class="form-group form-button">
+                        <button type="submit" class="footer-submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-body">
+        <small class="footer-copyright"> Jesse's Code CopyRight &copy; <%=year%> </small>
+    </div>
+</footer>

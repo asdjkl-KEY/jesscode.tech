@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include("partials/SEO", {
+        description: `Esta es la página inicial por ahora`,
+        page: "About"
+    }) %>
+    <%- include("partials/styles", {path: path}) %>
+    <link rel="stylesheet" type="text/css" href="<%=path%>css/typing.css">
+    <link rel="stylesheet" type="text/css" href="<%=path%>css/components/about.css">
+</head>
+<body>
+    <div id="root">
+        <header>
+            <%- include("partials/nav", {path: path}) %>
+            <h1 class="maximum-title">About Me</h1>
+        </header>
+        
+        <div class="badges">
+            <h2>My badges</h2>
+            <div class="contain-badges">
+                <% for(badge of badges) { %>
+                    <div class="insign">
+                        <a href="<%=badge.link%>"><img src="<%=badge.link%>" alt="<%=badge.name%>"></a>
+                    </div>
+                <%}%>
+            </div>
+        </div>
+        <main class="info">
+            <div class="main-head">
+                <h3>Sobre mí</h3>
+            </div>
+            <div class="main-body">
+                <p class="main-info">
+                    Hola mi nombre es <b>Isaí Medina</b>, soy un programador web (web developer) 
+                    fullstack, trabajo con sitios web desde febrero del 2022, estoy ubicado en <b>Santa Catarina - Brasil</b>, 
+                    
+                </p>
+            </div>
+        </main>
+
+
+
+        <%- include("partials/footer", {path: path, year: new Date().getFullYear()}) %>
+        <script>current = 'aboutme';</script>
+    <%- include("partials/scripts", {path: path}) %>
+    </div>
+</body>
+</html>
