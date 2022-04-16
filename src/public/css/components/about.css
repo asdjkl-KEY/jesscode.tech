@@ -22,3 +22,52 @@
     background: #eaeaea;
     border-radius: 12px;
 }
+
+/*Main*/
+.info {
+    display: block;
+    padding: 24px 100px;
+    background: #e9e9e9;
+}
+.main-head {
+    margin-bottom: 12px;
+}
+.main-thumbnail {
+    width: 200px;
+    height: 200px;
+}
+.main-head h3 {
+    font-size: 2em;
+    color: #333;
+}
+.main-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 12% 88% 11% 89% / 87% 6% 94% 13%;
+    border: 4px solid #fefefe;
+    box-shadow: 0 0 0 12px #e7e7e7;
+}
+.main-body {
+    color: #5a5a5a;
+}
+.main-info {
+    display: block;
+    padding: 32px 0;
+}
+.main-info b {
+    color: #111;
+    font-weight: bold;
+}
+.main-info a {
+    text-decoration: none;
+    color: #44f;
+}
+.main-button {
+    width: 120px;
+    text-align: center;
+    padding: 12px;
+    background: #cdcdcd;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #44f;
+}
