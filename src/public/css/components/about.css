@@ -71,3 +71,60 @@
     text-decoration: none;
     color: #44f;
 }
+.formation {
+    padding: 12px;
+    background: #d9d9d9;
+}
+.formation-title {
+    font-size: 2.4em;
+    text-align: center;
+    color: #343434;
+}
+.formation-body {
+    padding: 16px;
+}
+.academy-name {
+    color: #99f;
+    font-size: 2em;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.container-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 48px;
+    grid-template-rows: 200px;
+    margin-top: 48px;
+    padding: 32px;
+    
+}
+.curse {
+    position: relative;
+    display: grid;
+    grid-template-rows: 70% 1fr 5%;
+    margin-top: 48px;
+}
+.curse-thumbnail {
+    padding: 60px;
+}
+.curse-body span {
+    color: #5f9696;
+    display: block;
+    text-align: center;
+}
+.curse-body p {
+    color: #80b1b1;
+}
+.curse-footer {
+    margin-top: 32px;
+    text-align: center;
+}
+.curse-link {
+    text-decoration: none;
+    color: #ffffff;
+    background: #6cbbbb;
+    padding: 12px;
+    border-radius: 12px;
+    width: 100%;
+}
