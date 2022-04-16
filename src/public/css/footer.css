@@ -211,7 +211,7 @@
     }
     .contain-footer-form {
         width: 100%;
-        margin: 0;
+        margin-right: -150%;
         padding: 0;
         position: static;
     }
@@ -244,5 +244,13 @@
     }
     .footer-message {
         margin-left: -12px;
+    }
+}
+@keyframes entry{
+    from {
+        margin-right: -150%;
+    }
+    to {
+        margin-right: 0;
     }
 }
