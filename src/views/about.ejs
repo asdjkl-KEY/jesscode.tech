@@ -28,10 +28,10 @@
         </div>
         <main class="info">
             <div class="main-head">
+                <h3>Sobre mí</h3>
                 <div class="main-thumbnail">
                     <img src="<%=path%>assets/imgs/me.jpg" alt="Isaí Medina">
                 </div>
-                <h3>Sobre mí</h3>
             </div>
             <div class="main-body">
                 <p class="main-info">
@@ -64,18 +64,9 @@
                 <div class="container-4">
                     <%for (curse of curses) {%>
                         <div class="curse">
-                            <div class="curse-thumbnail">
-                                <img src="<%=curse.image%>" id="curse-thumnail" alt="<%=curse.name%>">
-                            </div>
-                            <div class="curse-body">
-                                <span><%=curse.name%></span>
-                                <p>
-                                    <%=curse.descript%>
-                                </p>
-                            </div>
-                            <div class="curse-footer">
-                                <a href="<%=curse.link%>" class="curse-link">Certificado</a>
-                            </div>
+                            <img src="<%=curse.image%>" id="curse-thumbnail" alt="<%=curse.name%>">
+                            <span><%=curse.name%></span>
+                            <a href="<%=curse.link%>" class="curse-link">Certificado</a>
                         </div>
                     <%}%>
                 </div>

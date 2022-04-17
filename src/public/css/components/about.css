@@ -39,6 +39,7 @@
 .main-head h3 {
     font-size: 2em;
     color: #333;
+    text-align: center;
 }
 .main-thumbnail img {
     width: 100%;
@@ -70,6 +71,11 @@
     border-radius: 12px;
     text-decoration: none;
     color: #44f;
+    transition: all 0.3s;
+}
+.main-button:hover {
+    color: #fefefe;
+    background: #00f;
 }
 .formation {
     padding: 12px;
@@ -92,39 +98,63 @@
 }
 .container-4 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 48px;
-    grid-template-rows: 200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 200px;
+    grid-template-rows: 250px;
     margin-top: 48px;
     padding: 32px;
     
 }
 .curse {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
-    display: grid;
-    grid-template-rows: 70% 1fr 5%;
-    margin-top: 48px;
 }
-.curse-thumbnail {
-    padding: 60px;
+#curse-thumbnail {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
 }
-.curse-body span {
-    color: #5f9696;
-    display: block;
+.curse span {
+    width: 100%;
     text-align: center;
-}
-.curse-body p {
-    color: #80b1b1;
-}
-.curse-footer {
-    margin-top: 32px;
-    text-align: center;
+    color: #6161ac;
+    margin: 24px 0;
+    margin-top: 0;
 }
 .curse-link {
     text-decoration: none;
-    color: #ffffff;
-    background: #6cbbbb;
-    padding: 12px;
-    border-radius: 12px;
     width: 100%;
+    color: #44f;
+    background: #cdcdcd;
+    text-align: center;
+    padding: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+.curse-link:hover {
+    background: #00f;
+    color: #fefefe;
+}
+
+@media only screen and (max-width: 991px) {
+    .info {
+        padding: 32px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .main-thumbnail {
+        width: 100%;
+        height: auto;
+    }
+    .main-thumbnail img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        border: none;
+        box-shadow: none;
+    }
 }

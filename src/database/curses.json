@@ -2,49 +2,21 @@
     {
         "name": "Git & Github",
         "link": "https://cursos.alura.com.br/certificate/asdjkl-key/git-github-controle-de-versao",
-        "image": "assets/svg/github.svg",
-        "descript": "Control de versiones y código compartido"
+        "image": "assets/svg/github.svg"
     },
     {
-        "name": "Programacion I",
+        "name": "Lógica de Programacion I & II",
         "link": "https://cursos.alura.com.br/certificate/asdjkl-key/logica-programacao-javascript-html",
-        "image": "assets/svg/log1.svg",
-        "descript": "Estudiando la lógica de programación"
+        "image": "assets/svg/log1.svg"
     },
     {
-        "name": "Programación II",
-        "link": "https://cursos.alura.com.br/certificate/asdjkl-key/logica-programacao-pratica-com-desenho-animacoes-em-jogo",
-        "image": "assets/svg/log2.svg",
-        "descript": "Aprendiendo y consolidando conocimiento"
-    },
-    {
-        "name": "Html5 & Css3: Parte 1",
+        "name": "Html5 & Css3: Parte 1,2,3 y 4",
         "link": "https://cursos.alura.com.br/certificate/asdjkl-key/html5-css3-primeiros-passos",
-        "image": "assets/svg/html1.svg",
-        "descript": "Primera página web con html y css"
-    },
-    {
-        "name": "Html5 & Css3: Parte 2",
-        "link": "https://cursos.alura.com.br/certificate/asdjkl-key/html5-css3-posicionamento-listas-navegacao",
-        "image": "assets/svg/html.svg",
-        "descript": "Posicionamiento, listas y navegación"
-    },
-    {
-        "name": "Html5 & Css3: Parte 3",
-        "link": "https://cursos.alura.com.br/certificate/asdjkl-key/html5-css3-formularios-tabelas",
-        "image": "assets/svg/html1.svg",
-        "descript": "Formularios y Tablas"
-    },
-    {
-        "name": "Html5 & Css3: Parte 4",
-        "link": "https://cursos.alura.com.br/certificate/asdjkl-key/html5-css3-avancando-css",
-        "image": "assets/svg/html.svg",
-        "descript": "Css un poco más avanzado"
+        "image": "assets/svg/html.svg"
     },
     {
         "name": "Javascript",
         "link": "https://cursos.alura.com.br/certificate/asdjkl-key/javascript-programando-na-linguagem-web",
-        "image": "assets/svg/js.svg",
-        "descript": "Programando en el lenguaje de la web"
+        "image": "assets/svg/js.svg"
     }
 ]
