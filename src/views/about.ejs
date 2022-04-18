@@ -16,7 +16,7 @@
             <h1 class="maximum-title">About Me</h1>
         </header>
         
-        <div class="badges">
+        <div class=" section badges">
             <h2>My badges</h2>
             <div class="contain-badges">
                 <% for(badge of badges) { %>
@@ -26,7 +26,7 @@
                 <%}%>
             </div>
         </div>
-        <main class="info">
+        <main class="section info">
             <div class="main-head">
                 <h3>Sobre mí</h3>
                 <div class="main-thumbnail">
@@ -55,12 +55,12 @@
                 <a href="/contact" class="main-button"><i class="fa fa-phone"></i> Contáctame</a>
             </div>
         </main>
-        <div class="formation" id="academy">
+        <div class="section formation" id="academy">
             <div class="formation-title">
                 <span>Formación</span>
             </div>
             <div class="formation-body">
-                <a class="academy-name" href="https://alura.com.br">Alura Academia Informática Online</a>
+                <a class="academy-name" href="https://alura.com.br">Alura Academia Informática Online <br>Oracle Next Education ONE</a>
                 <div class="container-4">
                     <%for (curse of curses) {%>
                         <div class="curse">
@@ -69,6 +69,33 @@
                             <a href="<%=curse.link%>" class="curse-link">Certificado</a>
                         </div>
                     <%}%>
+                </div>
+            </div>
+        </div>
+        <div class="section works">
+            <div class="works-title">
+                <span>Algunos mini-projectos</span>
+            </div>
+            <div class="works-body">
+                <div class="container">
+                    <div class="colm">
+                        <article class="article-present">
+                            <div class="article-head">
+                                <img src="<%=path%>assets/imgs/3.jpg" alt="Encriptator" class="img-article-top">
+                            </div>
+                            <strong class="article-title">
+                                Encriptador de Texto
+                            </strong>
+                            <p class="article-description">
+                                Un pequeño encriptador de texto usando Html, Css y JavaScript
+                            </p>
+                            <a href="https://asdjkl-key.github.io/encryptatorV2/" class="article-button"><b class="button-bold">Ver</b></a>
+                            <small class="article-footer">15/04/2022</small>
+                        </article>
+                    </div>
+                </div>
+                <div class="works-button">
+                    <a href="/works" class="works-link">Ver todos los trabajos</a>
                 </div>
             </div>
         </div>
