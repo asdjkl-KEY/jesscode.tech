@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <%- include("partials/SEO", {
+        description: `Crea ya tu página web, y descubre las maravillas de la programación`,
+        page: "Works"
+    }) %>
+    <%- include("partials/styles", {path: path}) %>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if(ws.length <= 5) {%><style>.container-all{grid-template-rows: 1fr;}</style><%} else {%><style>.container-all{grid-template-rows: 1fr 1fr;}</style><%}%>
+    <link rel="stylesheet" type="text/css" href="<%=path%>css/components/works.css">
+    <link rel="stylesheet" type="text/css" href="<%=path%>css/components/pagination.css">
 </head>
 <body>
-    
+    <header>
+        <%- include("partials/nav", {path: path}) %>
+        <h1 class="maximum-title">Mis Trabajos</h1>
+    </header>
+    <div class="section">
+        <div class="contain-title">
+            <strong>Trabajos recientes</strong>
+        </div>
+        <div class="container">
+            <% for (work of recentWorks) { %>
+                <div class="colm">
+                    <article class="article-present">
+                        <% if (work.state === "new") { %> 
+                            <span class="article-new">New</span>
+                            <%}%>
+                        <div class="article-head">
+                            <img src="<%=path%>assets/articles/<%=work.image%>" alt="<%=work.name%>" class="img-article-top">
+                        </div>
+                        <strong class="article-title">
+                            <%=work.title%>
+                        </strong>
+                        <p class="article-description">
+                            <%=work.simpleDescript%>
+                        </p>
+                        <a href="<%=work.link%>" class="article-button"><b class="button-bold">Ver Más</b></a>
+                        <small class="article-footer"><%=work.createdAt%></small>
+                    </article>
+                </div>
+                <%}%>
+        </div>
+    </div>
+    <div class="section bull-2">
+        <div class="contain-title" id="allworks">
+            <strong>Todos los trabajos</strong>
+        </div>
+        <div class="container-all">
+            <% for (w of ws) { %>
+                <div class="place">
+                    <div class="place-thumbnail">
+                        <img src="<%=path%><%=w.image%>" alt="<%=w.name%>">
+                    </div>
+                    <div class="place-name">
+                        <strong>
+                            <%=w.name%>
+                        </strong>
+                    </div>
+                    <div class="place-button">
+                        <a href="<%=w.link%>">Visualizar</a>
+                    </div>
+                </div>
+            <%}%>
+        </div>
+        <div class="container-pagination">
+            <div class="pagination">
+                <% if(page > 1) {%>
+                    <a href="/works/<%=prev%>#allworks" class="prev">Anterior</a>
+                <%}%>
+                <span class="number-page"><%=page%> / <%=finalpage%></span>
+                <% if(page < pages.length) {%>
+                    <a href="/works/<%=next%>#allworks" class="next">Siguiente</a>
+                <%}%>
+            </div>
+        </div>
+    </div>
+    <%- include("partials/footer", {path: path, year: new Date().getFullYear()}) %>
+        <script>current = 'works';</script>
+    <%- include("partials/scripts", {path: path}) %>
 </body>
 </html>
