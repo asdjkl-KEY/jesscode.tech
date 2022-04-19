@@ -58,3 +58,17 @@
         gap: 56px 24px;
     }
 }
+@media screen and (max-width: 576px) {
+    .container-all {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px 4px;
+        padding: 4px;
+    }
+}
+@media screen and (max-width: 280px) {
+    .container-all {
+        grid-template-columns: 1fr;
+        gap: 48px 0px;
+        padding: 12px;
+    }
+}

@@ -5,29 +5,43 @@
 .pagination {
     width: 50%;
     margin-left: 25%;
-    padding: 16px;
-    background: #999;
+    padding: 16px 0;
+    background: #cdcdcd;
+    border: 1px solid #44f;
+    color: #444;
     font-size: 2em;
     text-align: center;
     position: relative;
+    border-radius: 8px;
 }
 .pagination a {
     text-decoration: none;
-    color: #444;
+    color: #44f;
     padding: 12px;
-    background: #bbb;
-    font-size: 20px;
-}
-#page-divise {
-    margin: 0 24px;
+    background: #fff;
+    font-size: 15px;
 }
 .prev {
     position: absolute;
     left: 2%;
     top: 20%;
+    border-radius: 100% 0% 0% 100% / 50% 50% 50% 50%;
 }
 .next {
     position: absolute;
     right: 2%;
     top: 20%;
+    border-radius: 0% 100% 100% 0% / 100% 50% 50% 0%;
+}
+
+@media screen and (max-width: 768px) {
+    .container-pagination {
+        padding: 12px;
+        margin: 0;
+    }
+    .pagination {
+        width: 100%;
+        margin-left: 0;
+        padding: 16px 0;
+    }
 }
