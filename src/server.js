@@ -7,6 +7,9 @@ const router = require('./app/router');
 
 app.set('views', path.join(__dirname, '../src/views'));
 
+//configs
+require('./modules/load.confings')();
+
 //middlewares
 middlewares(app);
 
