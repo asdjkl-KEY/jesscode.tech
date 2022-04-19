@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const flash = require('connect-flash');
 const session = require('express-session');
+const passport = require('passport')
 
 module.exports = (app) => {
     app.set('view engine', 'ejs');
@@ -13,6 +14,8 @@ module.exports = (app) => {
         resave: false,
         saveUninitialized: false
     }));
+    app.use(passport.initialize());
+    app.use(passport.session());
     app.use(flash());
 
 }
